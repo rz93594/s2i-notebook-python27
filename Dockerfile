@@ -19,8 +19,8 @@ RUN apt-get update && apt-get install -y libfreetype6 libfreetype6-dev \
 COPY s2i ${WARPDRIVE_APP_ROOT}/.s2i
 COPY run.sh ${WARPDRIVE_APP_ROOT}/run.sh
 
-LABEL io.k8s.description="S2I builder for Jupyter Notebooks." \
-      io.k8s.display-name="Jupyter Notebook" \
+LABEL io.k8s.description="S2I builder for Jupyter Notebooks (Python 2.7)." \
+      io.k8s.display-name="Jupyter Notebook (Python 2.7)" \
       io.openshift.tags="builder,python,python27,jupyter"
 
 # Switch back to non 'root' user. Must use the uid and not the user name

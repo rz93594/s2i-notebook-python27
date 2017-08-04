@@ -12,6 +12,9 @@ RUN apt-get update && apt-get install -y libfreetype6 libfreetype6-dev \
     libav-tools libgeos-dev && \
     apt-get clean && \
     rm -r /var/lib/apt/lists/*
+    
+RUN pip install --upgrade pip
+
 
 # Copy in S2I scripts and override S2I labels to flag this as now being
 # builder for Jupyter notebooks.

@@ -23,6 +23,8 @@ COPY requirements.txt ${WARPDRIVE_SRC_ROOT}/requirements.txt
 
 RUN chown 1001:0 ${WARPDRIVE_SRC_ROOT}/requirements.txt
 
+RUN pip install --upgrade pip
+
 LABEL io.k8s.description="S2I builder for Jupyter Notebooks (Python 2.7)." \
       io.k8s.display-name="Jupyter Notebook (Python 2.7)" \
       io.openshift.tags="builder,python,python27,jupyter"
